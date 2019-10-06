@@ -15,5 +15,186 @@
     <button onclick="umnojit()" id="e">*</button>
     <button onclick="razdelit()" id="f">/</button>
     <div><p id="output">Ответ</p></div>
+    <script>
+        function slojit() {
+    var a, b, result;
+    a = document.getElementById("a").value;
+    a = parseInt(a);
+    b = document.getElementById("c").value;
+    b = parseInt(b);
+
+
+    result = a+b;
+    document.getElementById("output").innerHTML = result;
+}
+function vichest() {
+    var a, b, result;
+    a = document.getElementById("a").value;
+    a = parseInt(a);
+    b = document.getElementById("c").value;
+    b = parseInt(b);
+
+    result = a-b;
+    document.getElementById("output").innerHTML = result;
+}
+function umnojit() {
+    var a, b, result;
+    a = document.getElementById("a").value;
+    a = parseInt(a);
+    b = document.getElementById("c").value;
+    b = parseInt(b);
+
+    result = a*b;
+    document.getElementById("output").innerHTML = result;
+}
+function razdelit() {
+    var a, b, result;
+    a = document.getElementById("a").value;
+    a = parseInt(a);
+    b = document.getElementById("c").value;
+    b = parseInt(b);
+
+    result = a/b;
+    document.getElementById("output").innerHTML = result;
+}
+function stepen() {
+    var a, b;
+    a = document.getElementById("h").value;
+    a = parseInt(a);
+    b = document.getElementById("a").value;
+    b = parseInt(b);
+
+    result = Math.pow(b,a);
+    document.getElementById("output").innerHTML = result;
+}
+function koren() {
+    var a;
+    a = document.getElementById("c").value;
+    a = parseInt(a);
+
+    result = Math.sqrt(a);
+    document.getElementById("output").innerHTML = result;
+}
+function procent() {
+    var a, b;
+    a = document.getElementById("a").value;
+    a = parseInt(a);
+    b = document.getElementById("m").value;
+    b = parseInt(b);
+
+    result = a * 0.01 * b;
+    document.getElementById("output").innerHTML = result;
+}
+function logorifm() {
+    var b;
+    b = document.getElementById("c").value;
+    b = parseInt(b);
+
+    result = Math.log(b);
+    document.getElementById("output").innerHTML = result;
+}
+</script>
+<style>
+    #cal {
+    text-align: center;
+    font-family: Florence, cursive;
+    font-size: 30px;
+    text-shadow: 5px 2px 4px #058f9e;
+    color: #00e5ff;
+}
+#a {
+    width: 230px;
+    margin-left: 10px;
+    margin-top: 50px;
+    height: 40px;
+}
+body {
+    background-color: black;
+}
+#b {
+    margin-left: 500px;
+    width: 200px;
+    margin-top: 30px;
+    height: 40px;
+    border-color: azure;
+    font-size: 30px;
+}
+#c {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 230px;
+    height: 40px;
+}
+#output {
+    background-color: gold;
+    margin-left: 630px;
+    width: 150px;
+    font-size: large;
+    text-align: center;
+    margin-top: 30px;
+    font-family: Florence, cursive;
+}
+#d {
+    border-color: azure;
+    width: 200px;
+    height: 40px;
+    font-size: 30px;
+}
+#e {
+    font-size: 30px;
+    border-color: azure;
+    margin-left: 500px;
+    width: 200px;
+    height: 40px;
+}
+#f {
+    border-color: azure;
+    width: 200px;
+    height: 40px;
+    font-size: 30px;
+}
+#g {
+    margin-left: 20px;
+    border-color: azure;
+}
+#h {
+    width: 30px;
+}
+#i {
+    color: aliceblue;
+    font-family: Florence, cursive;
+}
+#k {
+    margin-left: 20px;
+    border-color: azure;
+    width: 150px;
+}
+#l {
+    margin-left: -4px;
+    border-color: azure;
+}
+#m {
+    width: 30px;
+    margin-left: 434px;
+}
+#n {
+    color: azure;
+    margin-left: 10px;
+    font-family: Florence, cursive;
+}
+#o {
+    margin-left: 485px;
+    border-color: azure;
+}
+#p {
+    width: 30px;
+    margin-left: -4px;
+}
+#r {
+    color: azure;
+    font-family: Florence, cursive;
+    margin-left: 10px;
+}
+</style>
 </body>
 </html>
