@@ -1,2 +1,0 @@
-# Nothing-special
-Normal calculator
