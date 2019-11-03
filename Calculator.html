@@ -16,8 +16,7 @@
     <button onclick="razdelit()" id="f">/</button>
     <div><p id="output">Ответ</p></div>
     <script>
-        function slojit() {
-    var a, b, result;
+       function slojit() {
     a = document.getElementById("a").value;
     a = parseInt(a);
     b = document.getElementById("c").value;
@@ -28,37 +27,18 @@
     document.getElementById("output").innerHTML = result;
 }
 function vichest() {
-    var a, b, result;
-    a = document.getElementById("a").value;
-    a = parseInt(a);
-    b = document.getElementById("c").value;
-    b = parseInt(b);
-
     result = a-b;
     document.getElementById("output").innerHTML = result;
 }
 function umnojit() {
-    var a, b, result;
-    a = document.getElementById("a").value;
-    a = parseInt(a);
-    b = document.getElementById("c").value;
-    b = parseInt(b);
-
     result = a*b;
     document.getElementById("output").innerHTML = result;
 }
 function razdelit() {
-    var a, b, result;
-    a = document.getElementById("a").value;
-    a = parseInt(a);
-    b = document.getElementById("c").value;
-    b = parseInt(b);
-
     result = a/b;
     document.getElementById("output").innerHTML = result;
 }
 function stepen() {
-    var a, b;
     a = document.getElementById("h").value;
     a = parseInt(a);
     b = document.getElementById("a").value;
@@ -68,7 +48,6 @@ function stepen() {
     document.getElementById("output").innerHTML = result;
 }
 function koren() {
-    var a;
     a = document.getElementById("c").value;
     a = parseInt(a);
 
@@ -76,7 +55,6 @@ function koren() {
     document.getElementById("output").innerHTML = result;
 }
 function procent() {
-    var a, b;
     a = document.getElementById("a").value;
     a = parseInt(a);
     b = document.getElementById("m").value;
@@ -86,14 +64,13 @@ function procent() {
     document.getElementById("output").innerHTML = result;
 }
 function logorifm() {
-    var b;
     b = document.getElementById("c").value;
     b = parseInt(b);
 
     result = Math.log(b);
     document.getElementById("output").innerHTML = result;
 }
-</script>
+    </script>
 <style>
     #cal {
     text-align: center;
