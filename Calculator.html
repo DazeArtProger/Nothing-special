@@ -1,176 +1,287 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="Калькулятор.css">
-        <script type="text/javascript" src="Калькулятор.js"></script>
-    </head>
-<br>
-    <input type="text" id="m">
-    <button onclick="procent()" id="l">Процент</button><i id="n">от</i>
-    <input type="text" id="a"> <button onclick="stepen()" id="g">Возвести в</button><input type="text" id="h"><i id="i"> степень</i></br>
-    <button onclick="logorifm()" id="o">Логорифм</button>
-    <input type="text" id="c"><button onclick="koren()" id="k">Корень числа</button></br>
-    <button onclick="slojit()" id="b">+</button>
-    <button onclick="vichest()" id="d">-</button></b></br>
-    <button onclick="umnojit()" id="e">*</button>
-    <button onclick="razdelit()" id="f">/</button>
-    <div><p id="output">Ответ</p></div>
-    <script>
-       function slojit() {
-    a = document.getElementById("a").value;
-    a = parseInt(a);
-    b = document.getElementById("c").value;
-    b = parseInt(b);
+<body>
+<i>a </i><input type="text" id="a" onclick="x()"></br>
+<i>b </i><input type="text" id="b" onclick="m()"></br></br>
+    <button id="odin">1</button>
+    <button id="dva">2</button>
+    <button id="tri">3</button>
+    <button id="chetire">4</button>
+    <button id="pyat">5</button>
+    <button id="shest">6</button>
+    <button id="sem">7</button>
+    <button id="vosem">8</button>
+    <button id="devyat">9</button>
+    <button id="noll">0</button></br>
+    <button onclick="plus()" id="p">+</button>
+    <button onclick="minus()" id="m">-</button>
+    <button onclick="umnojit()" id="u">*</button>
+    <button onclick="razdelit()" id="r">/</button></br>
+    <button onclick="koren()" id="k">√(a)</button>
+    <button onclick="procent()" id="pr">a%b</button>
+    <button onclick="stepen()" id="s">a^b</button>
+    <button onclick="logorifm()" id="l">log(a)</button></br>
+    <button onclick="steret()" id="st">Delete</button>
+<script>
+    function x() {
+    var a = document.getElementById("a").value;
+    document.getElementById("odin").onclick = function(e){       
+    a = document.getElementById("a").value = a + "1";
 
-
-    result = a+b;
-    document.getElementById("output").innerHTML = result;
+   }
+    document.getElementById("dva").onclick = function(e){
+    a = document.getElementById("a").value = a + "2";
+   }
+   document.getElementById("tri").onclick = function(e){
+    a = document.getElementById("a").value = a + "3";
+   }
+   document.getElementById("chetire").onclick = function(e){
+    a = document.getElementById("a").value = a + "4";
+   }
+   document.getElementById("pyat").onclick = function(e){
+    a = document.getElementById("a").value = a + "5";
+   }
+   document.getElementById("shest").onclick = function(e){
+    a = document.getElementById("a").value = a + "6";
+   }
+   document.getElementById("sem").onclick = function(e){
+    a = document.getElementById("a").value = a + "7";
+   }
+   document.getElementById("vosem").onclick = function(e){
+    a = document.getElementById("a").value = a + "8";
+   }
+   document.getElementById("devyat").onclick = function(e){
+    a = document.getElementById("a").value = a + "9";
+   }
+   document.getElementById("noll").onclick = function(e){
+    a = document.getElementById("a").value = a + "0";
+   }
+   
+    }
+    function m() {
+    var b = document.getElementById("b").value;
+    document.getElementById("odin").onclick = function(e){       
+    b = document.getElementById("b").value = b + "1";
+   }
+    document.getElementById("dva").onclick = function(e){
+    b = document.getElementById("b").value = b + "2";
+   }
+   document.getElementById("tri").onclick = function(e){
+    b = document.getElementById("b").value = b + "3";
+   }
+   document.getElementById("chetire").onclick = function(e){
+    b = document.getElementById("b").value = b + "4";
+   }
+   document.getElementById("pyat").onclick = function(e){
+    b = document.getElementById("b").value = b + "5";
+   }
+   document.getElementById("shest").onclick = function(e){
+    b = document.getElementById("b").value = b + "6";
+   }
+   document.getElementById("sem").onclick = function(e){
+    b = document.getElementById("b").value = b + "7";
+   }
+   document.getElementById("vosem").onclick = function(e){
+    b = document.getElementById("b").value = b + "8";
+   }
+   document.getElementById("devyat").onclick = function(e){
+    b = document.getElementById("b").value = b + "9";
+   }
+   document.getElementById("noll").onclick = function(e){
+    b = document.getElementById("b").value = b + "0";
+   }
+    }
+function logorifm() {
+    var a = document.getElementById("a").value;
+        a = parseFloat(a);
+    var result = Math.log(a);
+    document.getElementById("a").value = result;
+    document.getElementById("b").value="";
 }
-function vichest() {
-    result = a-b;
-    document.getElementById("output").innerHTML = result;
+function plus() {
+    var a = document.getElementById("a").value;
+    a = parseFloat(a);
+    var b = document.getElementById("b").value;
+    b = parseFloat(b);
+    var result = a + b;
+    document.getElementById("a").value = result;
+    document.getElementById("b").value="";
+    a = "";
+    b = "";
+    result = "";
+}
+function minus() {
+    var a = document.getElementById("a").value;
+    a = parseFloat(a);
+    var b = document.getElementById("b").value;
+    b = parseFloat(b);
+    var result = a - b;
+    document.getElementById("a").value = result;
+    document.getElementById("b").value="";
 }
 function umnojit() {
-    result = a*b;
-    document.getElementById("output").innerHTML = result;
+    var a = document.getElementById("a").value;
+    a = parseFloat(a);
+    var b = document.getElementById("b").value;
+    b = parseFloat(b);
+    var result = a * b;
+    document.getElementById("a").value = result;
+    document.getElementById("b").value="";
 }
 function razdelit() {
-    result = a/b;
-    document.getElementById("output").innerHTML = result;
-}
-function stepen() {
-    a = document.getElementById("h").value;
-    a = parseInt(a);
-    b = document.getElementById("a").value;
-    b = parseInt(b);
-
-    result = Math.pow(b,a);
-    document.getElementById("output").innerHTML = result;
+    var a = document.getElementById("a").value;
+    a = parseFloat(a);
+    var b = document.getElementById("b").value;
+    b = parseFloat(b);
+    var result = a / b;
+    document.getElementById("a").value = result;
+    document.getElementById("b").value="";
 }
 function koren() {
-    a = document.getElementById("c").value;
-    a = parseInt(a);
-
-    result = Math.sqrt(a);
-    document.getElementById("output").innerHTML = result;
+    var a = document.getElementById("a").value;
+    a = parseFloat(a);
+    var result = Math.sqrt(a);
+    document.getElementById("a").value = result;
+    document.getElementById("b").value="";
 }
 function procent() {
-    a = document.getElementById("a").value;
-    a = parseInt(a);
-    b = document.getElementById("m").value;
-    b = parseInt(b);
-
-    result = a * 0.01 * b;
-    document.getElementById("output").innerHTML = result;
+    var a = document.getElementById("a").value;
+        a = parseFloat(a);
+        var b = document.getElementById("b").value;
+        b = parseFloat(b);
+    var result = b * 0.01 * a;
+    document.getElementById("a").value = result;
+    document.getElementById("b").value="";
 }
-function logorifm() {
-    b = document.getElementById("c").value;
-    b = parseInt(b);
+function stepen() {
+    var a = document.getElementById("a").value;
+    a = parseFloat(a);
+    var b = document.getElementById("b").value;
+    b = parseFloat(b);
 
-    result = Math.log(b);
-    document.getElementById("output").innerHTML = result;
+    var result = Math.pow(a,b);
+    document.getElementById("a").value = result;
+    document.getElementById("b").value="";
 }
-    </script>
+document.getElementById("st").onclick = function(e) {
+    document.getElementById("a").value = "";
+    document.getElementById("b").value = "";
+       }
+</script>
 <style>
-    #cal {
-    text-align: center;
-    font-family: Times New Roman;
-    font-size: 30px;
-    text-shadow: 5px 2px 4px #058f9e;
-    color: #00e5ff;
+#odin {
+    margin-left: 540px;
+    font-size: 25px;
+}
+#dva {
+    font-size: 25px;
+}
+#tri {
+    font-size: 25px;
+}
+#chetire {
+    font-size: 25px;
+}
+#pyat {
+    font-size: 25px;
+}
+#shest {
+    font-size: 25px;
+}
+#sem {
+    font-size: 25px;
+}
+#vosem {
+    font-size: 25px;
+}
+#devyat {
+    font-size: 25px;
+}
+#desyat {
+    font-size: 25px;
+}
+#noll {
+    font-size: 25px;
+}
+#st {
+    margin-left: 660px;
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+#l {
+    margin-top: 15px;
+    width: 50px;
+    height: 45px;
+    font-size: 15px;
+    margin-left: 20px;
+}
+#s {
+    margin-top: 15px;
+    width: 50px;
+    height: 45px;
+    font-size: 20px;
+    margin-left: 20px;
+}
+#k {
+    margin-left: 573px;
+    margin-top: 15px;
+    width: 50px;
+    height: 45px;
+    font-size: 20px;
+}
+#pr {
+    margin-top: 15px;
+    width: 50px;
+    height: 45px;
+    font-size: 20px;
+    margin-left: 20px;
 }
 #a {
     width: 230px;
-    margin-left: 10px;
     margin-top: 50px;
     height: 40px;
+}
+#b {
+    width: 230px;
+    margin-top: 20px;
+    height: 40px;
+}
+i {
+    margin-left: 578px;
+    color: white;
 }
 body {
     background-color: black;
 }
-#b {
-    margin-left: 500px;
-    width: 200px;
-    margin-top: 30px;
-    height: 40px;
-    border-color: azure;
+#p {
+    margin-left: 572px;
+    width: 50px;
+    height: 50px;
+    margin-top: 15px;
     font-size: 30px;
-}
-#c {
-    margin-top: 10px;
-    margin-left: 10px;
-    width: 230px;
-    height: 40px;
-}
-#output {
-    background-color: gold;
-    margin-left: 630px;
-    width: 150px;
-    font-size: large;
-    text-align: center;
-    margin-top: 30px;
-    font-family: Florence, cursive;
-}
-#d {
-    border-color: azure;
-    width: 200px;
-    height: 40px;
-    font-size: 30px;
-}
-#e {
-    font-size: 30px;
-    border-color: azure;
-    margin-left: 500px;
-    width: 200px;
-    height: 40px;
-}
-#f {
-    border-color: azure;
-    width: 200px;
-    height: 40px;
-    font-size: 30px;
-}
-#g {
-    margin-left: 20px;
-    border-color: azure;
-}
-#h {
-    width: 30px;
-}
-#i {
-    color: aliceblue;
-    font-family: Florence, cursive;
-}
-#k {
-    margin-left: 20px;
-    border-color: azure;
-    width: 150px;
-}
-#l {
-    margin-left: -4px;
-    border-color: azure;
 }
 #m {
-    width: 30px;
-    margin-left: 434px;
+    margin-left: 20px;
+    width: 50px;
+    height: 50px;
+    margin-top: 15px;
+    font-size: 30px;
 }
-#n {
-    color: azure;
-    margin-left: 10px;
-    font-family: Times New Roman;
-}
-#o {
-    margin-left: 485px;
-    border-color: azure;
-}
-#p {
-    width: 30px;
-    margin-left: -4px;
+#u {
+    margin-left: 20px;
+    width: 50px;
+    height: 50px;
+    margin-top: 15px;
+    font-size: 30px;
 }
 #r {
-    color: azure;
-    font-family: Florence, cursive;
-    margin-left: 10px;
+    margin-left: 20px;
+    width: 50px;
+    height: 50px;
+    margin-top: 15px;
+    font-size: 30px;
 }
 </style>
 </body>
